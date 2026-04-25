@@ -1,0 +1,16 @@
+i have to make complete backend for my application
+
+use mongo db to store the user data 
+
+and take the onboarding data while creating the user account .
+
+And design a database schema for each game . design the level by level criteria for each game .
+
+and it should store the progress also of the child like on which 
+level user left the game . and then continue from that level only . 
+
+and properly reward the children with great animations , stars , rewards .
+
+and store all the data in the cloud database of mongodb.
+
+also create login signup for this application.

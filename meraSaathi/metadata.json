@@ -1,0 +1,5 @@
+{
+  "name": "Magic Solar System",
+  "description": "A camera-based AR illusion solar system learning game for kids using hand gestures.",
+  "requestFramePermissions": ["camera"]
+}

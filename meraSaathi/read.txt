@@ -1,0 +1,2153 @@
+now I want to develop a game in english subject , match letters. 
+game : ballons of differnet english letters of both capital and small letters will flowing in window in waving manner with wavy thread , child will use air navigation cursor and will select a ballon and strike or touch with the other ballon (of same letter like a and A, b and B , Z and z ) then bloom will popup with sounds and sparkle like efefct will show , user will get marks , at backgrund keep the homebg vedio user should be easily able to select the ballons and drag them and touch with another if letters match occurs (small and cap letters both ballongs will up ) if letters are diff then ballong will not pop up  and give show some cute message. , at a time keep onky five letters (4 ballons pair ) in scattered on screen , keep the ballon shape and size a bit bigger , mascot will be right bottom , cheering up child and how different emotions.
+speaking : https://assets.masko.ai/845c23/fluffball-9564/mascot-moves-body-minimal-but-cutely-feel-alive-li-0e372774.webm
+idle: https://assets.masko.ai/218728/fluffpuff-3aa6/mascot-stays-completely-still-only-a-soft-natural--b2de8396.webm
+joyfull : https://assets.masko.ai/fdbe91/fluffernuffball-3f39/joyful-bounce-5efb6fac.webm
+thinking : https://assets.masko.ai/60a441/fluffern-e04f/a-cute-fluffy-chibi-style-mascot-in-a-calm-idle-po-b130a813.webm
+
+
+game2:
+now create a new game on different route, and separte component and file , give me complete working code also how to connect different code if multi files , make sure the feature is implemnted very welll, ui should be be very smoth and media pipeline should work perfetcly and smoothly. don't break existing features or ui ask if needed any clarifiation.
+
+🎮 GAME NAME: "Guess the Word"
+
+IMPORTANT:
+
+
+
+DO NOT break any existing features, UI, routing, or hand tracking logic
+
+Reuse existing gesture + mascot system
+
+Keep everything frontend-only (hardcoded data)
+
+Ask if anything is unclear before implementing
+
+🎯 GAME OBJECTIVE
+
+The child must:
+
+
+
+Form a correct word using letter cubes
+
+Based on:
+
+A visual hint (image)
+
+Optional simple meaning
+
+Example:
+
+Image: 🍎
+
+Word: APPLE
+
+Slots: _ _ _ _ _
+
+🧠 GAME FLOW
+
+Show:
+
+Image hint (top center)
+
+Empty letter slots
+
+Letter cubes (scrambled)
+
+Child:
+
+Uses hand gesture cursor
+
+Drags cubes into slots
+
+System:
+
+Checks correctness
+
+If correct:
+
+Show celebration
+
+Load next word
+
+If wrong:
+
+Show gentle feedback
+
+🖼️ BACKGROUND
+
+Use:
+
+
+
+/public/gardenbg.mp4 OR garden-themed background
+
+Requirements:
+
+
+
+Soft, bright, playful garden theme 🌸🌿
+
+Slight blur + overlay for readability
+
+🧊 LETTER CUBES (CORE FEATURE)
+
+Design:
+
+3D-style cubes (fake 3D using shadows + gradients)
+
+VERY ROUNDED edges
+
+Bright pastel colors (each cube different)
+
+White bold rounded letter on front
+
+Thick soft shadow
+
+Typography:
+
+
+
+Rounded
+
+Bold
+
+WHITE text with colorful outline
+
+Layout:
+
+Bottom section of screen
+
+Random order (scrambled)
+
+Slight floating/bounce animation
+
+Interaction:
+
+Hover:
+
+Cube scales up
+
+Glow effect
+
+Select (pinch/hold):
+
+Cube lifts (z-index increase)
+
+Slight rotation
+
+Drag:
+
+Follows finger smoothly
+
+🧩 LETTER SLOTS
+
+Design:
+
+Top-middle area
+
+Big rounded boxes
+
+White base + thick violet border
+
+Empty slots show dashed outline
+
+Behavior:
+
+Drag cube → snap into slot
+
+Allow reordering
+
+Allow removal (drag out)
+
+🧠 VALIDATION LOGIC
+
+When all slots are filled:
+
+
+
+Combine letters → form word
+
+Compare with correct word
+
+✅ IF CORRECT:
+
+Cubes:
+
+Bounce + glow
+
+Slots:
+
+Flash green
+
+Effects:
+
+Confetti 🎉
+
+Sparkles ✨
+
+Mascot:
+
+jumping.mp4
+
+Voice:
+
+"Yay!"
+
+"Correct!"
+
+Score +1
+
+After 1.5s → load next word
+
+❌ IF WRONG:
+
+Slots shake slightly
+
+Cubes wiggle
+
+Mascot:
+
+thinking.mp4
+
+Voice:
+
+"Oops!"
+
+"Try again!"
+
+DO NOT reset automatically
+
+🖐️ GESTURE CONTROL
+
+Use existing MediaPipe system
+
+Cursor:
+
+Index finger tip
+
+Smooth interpolation
+
+Cute circular cursor
+
+Actions:
+
+Hover → highlight
+
+Hold → pick cube
+
+Drag → move cube
+
+Release → drop into slot
+
+🧸 MASCOT BEHAVIOR
+
+Position:
+
+
+
+Bottom-right corner
+
+States:
+
+Idle → blinking.mp4
+
+Talking → speaking.mp4
+
+Correct → jumping.mp4
+
+Wrong → thinking.mp4
+
+Encouragement → liking-leg.mp4
+
+Dialogue (Hardcoded)
+
+Start:
+
+
+
+"Guess the word!"
+
+"Look at the picture!"
+
+Correct:
+
+
+
+"Yay!"
+
+"You got it!"
+
+Wrong:
+
+
+
+"Oops!"
+
+"Try again!"
+
+Encourage:
+
+
+
+"You can do it!"
+
+🎨 UI DESIGN (VERY IMPORTANT)
+
+Theme:
+
+👉 EXTREMELY CHILDISH / CARTOON STYLE
+
+Main Game Container:
+
+Centered box
+
+Thick rounded border
+
+Color: Violet (#6C5CE7)
+
+Soft shadow
+
+Looks like a toy frame
+
+Buttons:
+
+Cartoon style
+
+Rounded pill shape
+
+Bright colors
+
+Bouncy animation
+
+Typography:
+
+Rounded font
+
+Bold
+
+White fill
+
+Thick colorful outline (IMPORTANT)
+
+Colors:
+
+Use:
+
+
+
+Pink 🌸
+
+Yellow 🌟
+
+Sky Blue ☁️
+
+Mint Green 🌿
+
+Violet 💜
+
+Avoid dull colors
+
+🧱 FILE STRUCTURE
+
+Add:
+
+/games
+
+
+
+GuessWord.tsx
+
+/components/game
+
+
+
+LetterCube.tsx
+
+SlotBox.tsx
+
+WordImage.tsx
+
+/data
+
+
+
+wordList.ts
+
+📦 HARD CODED WORD DATA
+
+Example:
+
+[
+
+{
+
+word: "APPLE",
+
+image: "/images/apple.png",
+
+hint: "A fruit"
+
+},
+
+{
+
+word: "BALL",
+
+image: "/images/ball.png",
+
+hint: "You can play with it"
+
+}
+
+]
+
+⚙️ PERFORMANCE
+
+Use requestAnimationFrame
+
+Use refs for drag positions
+
+Avoid excessive re-renders
+
+✨ EXTRA POLISH
+
+Add soft background music
+
+Add cube drop sound
+
+Add success sparkle animation
+
+Add loading animation
+
+🚫 CONSTRAINTS
+
+DO NOT break existing games
+
+DO NOT remove mascot system
+
+DO NOT change global architecture
+
+🧪 FINAL EXPECTATION
+
+Fully playable game
+
+Smooth drag interaction
+
+Beautiful childish UI
+
+Clear feedback system
+
+Engaging for kids
+
+IMPORTANT:
+
+This must feel like:
+
+👉 A FUN LEARNING GAME FOR KIDS
+
+NOT a normal web UI
+
+Focus on:
+
+
+
+Big elements
+
+Bright colors
+
+Smooth animations
+
+Instant feedback
+
+Now implement this completely with clean, modular, production-quality code.
+
+p4:
+i'm not able to use my hand gesture with media pipe , to pick letter and drag it into 
+empty slot.give me complete working code , also as background use gardenbg.jpeg ,
+first if all initaillly place all letters in random order of word, so that child can use 
+mind and arrange in correct order, second child can easily pick any letter and should only be 
+placed inside empty slot perfectly , not partiallly, when any letter placed at it's correct 
+position child will get a marks , and when the all letters filled with correct position a 
+reward like prize will be given , make sure hand movemnt pick and place work perfetcly, 
+don't break any existing feature and ui ask if need any clarification., use gardenbg as background. give me complete 
+working code from start to end.
+
+p5:
+now I want to implement one more game, for math's subject, it will be same as english 
+rearrange letters, in this we will have empty slots to put maths operands in this like 
+(5*2 = 10) , then in cubic box I will give (5,2,10,*) user have to place each one it's 
+correct possition to make equation valid, at each correct placement user will get 
+correct points and for each in correct message will be cute showed each operator 
+and operand should be fit correctly in empty slot, it's similar to english rearrange 
+but instead of letters we will use basic maths equation, use json data create 10 different
+ game question and show different based on child solving , if child able to solve in under 
+ 1 minute timer running then a bit hard question will be given on each next step if not 
+ then easy level will be given. (I want to show reinforcement learnning to judges ) 
+ implement it very well manner , give me complete working code 
+
+
+-----SPEECH THERAPY STARTS HERE---
+p1:
+I want to create a speech therapy playground, where I will help child for speech practice ,like 
+some child not able to speak words clearly like they say (ronak to lonak) and they struggle for better for so long , i want to create a speech therapy playground, where I will help child to speak letter in right way,
+in gamified way, this is high level idea for now "
+The Technical Architecture: Just as interactive learning games might use camera-based spatial tracking to trigger an event when a child moves their hand, Team Amplify's platform uses an acoustic processing layer. It intercepts the microphone input via Voice Assistant APIs (like Alexa or Google Assistant). The backend uses machine learning models to analyze the extracted acoustic features—specifically duration, loudness, and pitch (F0).
+
+I want to keep therapy in gamified , levels by level journey (similar to the dulingo style learing journey map), initially we will ask user which letter they want to practice, and then based on that I will show user objects based on letter , and with each letter we will have story (like to move lion from path pronounce it correctly , also my system will correctly identifies prononciation, for each speech therapy first my system will speak in very dragging or long so that child can undertand perfetcly , and then child will speak , my system will detect correct pronounciation)
+enviroment should be very gamified (scenery style) based on object, use required libraires , models , tools.
+
+story idea something like this "The Interaction: The child might encounter a virtual dragon blocking a path. To cast a "magic spell" to move the dragon, the child must hold a specific vocal pitch or hit a certain volume threshold."
+
+The Feedback Loop: If the audio input matches the required therapeutic threshold (e.g., sustained phonation), the system triggers a webhook that advances the game state, rewarding the child visually and narratively."
+create a separte route and add game link  , make sure you don't break any existing feature or ui.
+
+The Idea: An interactive, voice-controlled "Choose Your Own Adventure" platform that gamifies on-demand speech therapy.
+
+How it Works (The Mechanism):
+Instead of a clinician asking a child to "say 'Ahhh' loudly for three seconds," the platform immerses the child in a mythical game world.
+
+The Interaction: The child might encounter a virtual dragon blocking a path. To cast a "magic spell" to move the dragon, the child must hold a specific vocal pitch or hit a certain volume threshold.
+
+The Technical Architecture: Just as interactive learning games might use camera-based spatial tracking to trigger an event when a child moves their hand, Team Amplify's platform uses an acoustic processing layer. It intercepts the microphone input via Voice Assistant APIs (like Alexa or Google Assistant). The backend uses machine learning models to analyze the extracted acoustic features—specifically duration, loudness, and pitch (F0).
+
+The Feedback Loop: If the audio input matches the required therapeutic threshold (e.g., sustained phonation), the system triggers a webhook that advances the game state, rewarding the child visually and narratively.
+
+p2:
+remove my file code base from tsx , to jsx , also remove any type (don't break any existing feature or ui ) make sure all functiionalituies works seamlessly
+
+p3:
+replicate the same functionaity using web speech api only , make sure my code is so optimzed and works perfectly for kids, for speech therapy , give me complete optimzed and detailed code also tell how I can link code.
+make sure I should be able to replicate the functioanlity of this just using web speech api with my own custom logic.
+
+p4:
+this is my deaf feature app idea "Core Idea for Deaf Person :
+ Expectations - Learning but indirect gaming .
+Each achievement should be celebrated by giving award , points ,
+or we get a chance to talk with their role model .
+
+What is the idea ?
+
+Sound is just one medium : 
+why lose hope .
+Maximise the visual and kinetic channels 
+
+How to make them learn ?
+Manual reading is very boring 
+Solution : Zero Instruction Interface .
+
+Make them Learn through a mirror : 
+User will be shown on screen using camera .
+Mediapipe tracking all the hand and body movements . 
+A gamified shadow hand (it should be very cute and pleasing) .
+I am not expecting anything 3d here . I want 2d svgs and great animations 
+in them to give a illusion like 3d. As 3d is heavy . We will strictly stick 
+to 2d SVGs .
+
+As user is deaf so we will not use any type of voice .
+Step 1 -> we will tell the user in very pleaseing and cute way 
+to follow the hand . 
+User will follow / copy the hand 
+And will see magic after properly following it .
+
+
+Phase 1 -> Learning phase .
+
+User will see his video on screen .
+-> a very beautiful/cute/pleasing hand will tell user in gesture to follow him 
+-> properly animated 2d avg hand will tell the user / properly guide everything to the user 
+-> After user has agreed to follow the hand 
+-> we will take him to a complete gaming world 
+
+Theme to follow : 
+### **The Theme: "The Path of Lumina"**
+In this world, signs are the "batteries" that power floating islands. The world has gone dim, and as the child moves level by level, they use the power of their hands (signing) to literally "recharge" the world with light and color.
+
+
+The game features a vertical scrolling map with a winding path.
+* **The Environment Progression:** * Levels 1: "Deep Blue Ocean"
+    * Levels 2: "Emerald Jungle"
+    * Levels 3: "Cloud Kingdom"
+    * Levels 4: "Outer Space"
+* **The Nodes (Levels):**
+    * *Completed Levels:* Bright, spinning gold crystals.
+    * *Current Level:* A bouncing 2D SVG character icon (the user's avatar) standing on the crystal.
+    * *Locked Levels:* Transparent, grayed-out stones.
+
+#### **2. Level-by-Level Gameplay Loop**
+The "match" (like matching 3 candies) happens when the child's hand gesture perfectly matches the target sign on screen.
+* **The "Sugar Crush" Moment:** When a sign is perfectly performed, the on-screen sign/icon shatters into rainbow shards or explodes like a firework. 
+* **Visual Praise:** Immediate, large, bold text overlays appear (e.g., "AMAZING!", "SIGN-SATIONAL!", "DIVINE!") accompanied by high-contrast colors and glitter animations.
+
+#### **3. Rewards & Achievements**
+* **Star Rating:** Replaced by **"3 Glowing Lanterns."** The more accurate the sign, the brighter they glow.
+* **Boosters:** Replaced by the **"Magic Glove."** A power-up that provides a hint by showing a 2d svg beautiful using animations hand performing the correct sign.
+* **Episodes/Worlds:** Referred to as **"Sign Neighborhoods"** (e.g., "The Greeting Grove," "The Number Nebula," "The Emotion Ocean").
+* **Obstacles:** Replaced by **"Foggy Glass."** The screen becomes blurry, and the child must sign correctly to "clear the mist" and reveal the character or object behind it.
+
+#### **4. The "Dance Theme" Victory (The Mega Reward)**
+After clearing a each level, the map pauses for a Full-Screen Celebration (our version of the end-of-level Sugar Crush).
+* **The Character:** A highly expressive 3D companion (like a cute robot or friendly yeti).
+* **The Vibe:** A "Visual Disco" or "Neon Dance-Off." The background shifts to pulsing geometric shapes that create a visual rhythm. 
+* **The Action:** The character performs a celebratory dance that incorporates the signs the child just learned.
+* **Interactive Element:** The child can interact with the celebration using their hands (e.g., "high-fiving" the screen or "catching" falling digital stars) to increase their final score.
+
+USE 2D SVG CHARACTERS AT EACH PLACE WHEREVER REQUIRED PROPERLY ANIMATED 
+DONT GO FOR ANYTHING 3D
+
+At each level we are making them learn the important signs 
+-> Now i am you have to create the first level for now 
+-> 2d scg hand will teach him properly about making the sign 
+	OF WATER 
+-> right now we will not tell user anything about the water 
+-> We will make him follow the 2d svg hand that is properly animated 
+and teaching the user 
+-> user will try to make that sign which we teached him
+-> hand movements are being properly tracked by the mediapipe 
+-> when user will make the proper sign -> BOOM THE MAGIC HAPPENS 
+-> At first User will See water flowing from his hand in a complete 
+beatiful . cute . cartoonish manner which will make the user feel very good .
+-> THEN the theme completely changes -> We will show him a proper animated
+Beach view . where user will get to know what actually water is .
+
+-> After completion -> we will give the reward to user as per the theme .
+
+
+Give me a proper master prompt for this idea . 
+Improve it and make it best from your end whereever you see a flaw in the idea.
+Just show your complete power and give your 200% .
+And make this game best ever .
+MAke sure to use 2d svgs properly and highly animated . Follow the cartoonish theme.
+Use bright and vibrant colours . Use bold and pleasing texts ."
+
+
+p7:
+first of all keep the theme same as speech -therapy route , and 
+add atleast 10 level in this deaf game. and most important media pipe
+ is not workiing correctly , make sure it works perfectly and don't break
+  any existing feature or ui. it should able to correctly identifies the
+   hand sign of child and also should guide the child correctly, give me
+    copmplete working and optimzed code in detail donlt break any exitsing feature or ui.
+
+p8:
+this is my deaf-practice game url"https://playguugle-deaf.vercel.app/"
+this is my excercise game url  "https://exercisesfinal.vercel.app/"
+football game "https://game-five-flax.vercel.app/"
+
+
+this is my subject.ts  "export interface SubjectGame {
+
+  id: string;
+
+  title: string;
+
+  description: string;
+
+  route?: string;
+
+  status: 'ready' | 'coming-soon';
+
+}
+
+
+
+export interface SubjectDefinition {
+
+  id: 'english' | 'maths' | 'science' | 'social-science' | "speech" | "sign-language" | 'exercise';
+
+  name: string;
+
+  emoji: string;
+
+  accent: string;
+
+  shadow: string;
+
+  textStroke: string;
+
+  mascotPrompt: string;
+
+  games: SubjectGame[];
+
+}
+
+
+
+export const subjects: SubjectDefinition[] = [
+
+  {
+
+    id: 'speech',
+
+    name: 'Speech & Therapy',
+
+    emoji: '🗣️', // ADDED: Required emoji
+
+    accent: '#8b5cf6', // Violet
+
+    shadow: 'rgba(139, 92, 246, 0.35)', // ADDED: Required shadow to match the violet accent
+
+    textStroke: '#5b21b6',
+
+    mascotPrompt: 'Let\'s make some magic sounds!', // ADDED: Required mascot prompt
+
+    games: [
+
+      {
+
+        id: 'speech-playground',
+
+        title: 'Speech Magic',
+
+        description: 'Use your voice to cast magic spells and move obstacles!',
+
+        status: 'ready',
+
+        route: '/speech-therapy',
+
+      }
+
+    ]
+
+  },
+
+  {
+
+    id: 'english',
+
+    name: 'English',
+
+    emoji: '📖',
+
+    accent: '#ff7a45',
+
+    shadow: 'rgba(255, 122, 69, 0.34)',
+
+    textStroke: '#ef5a29',
+
+    mascotPrompt: 'Story time!',
+
+    games: [
+
+      {
+
+        id: 'match-letters',
+
+        title: 'Match Letters',
+
+        description: 'Drag uppercase and lowercase balloons together.',
+
+        route: '/english-match-letters',
+
+        status: 'ready',
+
+      },
+
+      {
+
+        id: 'draw-letters',
+
+        title: 'Draw Letters',
+
+        description: 'Trace giant letters with your hand.',
+
+        status: 'coming-soon',
+
+      },
+
+      {
+
+        id: 'guess-word',
+
+        title: 'Guess the Word',
+
+        description: 'Look at the picture and drag letters to spell the word!',
+
+        status: 'ready',
+
+        route: '/english-guess-word', 
+
+      }
+
+    ],
+
+  },
+
+  {
+
+    id: 'maths',
+
+    name: 'Maths',
+
+    emoji: '🔢',
+
+    accent: '#8b5cf6',
+
+    shadow: 'rgba(139, 92, 246, 0.35)',
+
+    textStroke: '#6d28d9',
+
+    mascotPrompt: 'Number power!',
+
+    games: [
+
+      {
+
+        id: 'count-fingers',
+
+        title: 'Count Fingers',
+
+        description: 'Count and match with your hands.',
+
+        status: 'coming-soon',
+
+      },
+
+      {
+
+        id: 'build-equation',
+
+        title: 'Build the Equation',
+
+        description: 'Drag numbers and symbols to build a correct math problem!',
+
+        status: 'ready',
+
+        route: '/math-equations', 
+
+      }
+
+    ],
+
+  },
+
+  {
+
+    id: 'science',
+
+    name: 'Science',
+
+    emoji: '🔬',
+
+    accent: '#22c55e',
+
+    shadow: 'rgba(34, 197, 94, 0.35)',
+
+    textStroke: '#15803d',
+
+    mascotPrompt: 'Blast into space!',
+
+    games: [
+
+      {
+
+        id: 'color-match',
+
+        title: 'Solar System Adventure',
+
+        description: 'Jump straight into the live solar system game.',
+
+        route: '/science-solar',
+
+        status: 'ready',
+
+      },
+
+    ],
+
+  },
+
+  {
+
+    id: 'social-science',
+
+    name: 'Social Science',
+
+    emoji: '🌍',
+
+    accent: '#06b6d4',
+
+    shadow: 'rgba(6, 182, 212, 0.35)',
+
+    textStroke: '#0f766e',
+
+    mascotPrompt: 'Let us explore the world!',
+
+    games: [
+
+      {
+
+        id: 'basic-quiz',
+
+        title: 'Basic Quiz',
+
+        description: 'Travel the world with easy prompts.',
+
+        status: 'coming-soon',
+
+      },
+
+    ],
+
+  },
+
+  // NEW SUBJECT: EXERCISE GAMES
+
+  {
+
+    id: 'exercise',
+
+    name: 'Exercise Games',
+
+    emoji: '🏃‍♂️',
+
+    accent: '#fb923c', // Vibrant Orange
+
+    shadow: 'rgba(251, 146, 60, 0.35)',
+
+    textStroke: '#9a3412',
+
+    mascotPrompt: 'Time to move your body!',
+
+    games: [
+
+      {
+
+        id: 'fitness-adventure',
+
+        title: 'Fitness Adventure',
+
+        description: 'Jump, duck, and move to play the game!',
+
+        status: 'ready',
+
+        externalUrl: 'https://exercisesfinal.vercel.app/', // EXTERNAL LINK
+
+      }
+
+    ]
+
+  },
+
+  {
+
+  id: 'sign-language',
+
+  name: 'Sign Language',
+
+  emoji: '👐',
+
+  accent: '#38bdf8', // Sky blue
+
+  shadow: 'rgba(56, 189, 248, 0.35)',
+
+  textStroke: '#0284c7',
+
+  mascotPrompt: 'Watch my hands!',
+
+  games: [
+
+    {
+
+      id: 'path-of-lumina',
+
+      title: 'Path of Lumina',
+
+      description: 'Use your hands to bring light back to the world!',
+
+      status: 'ready',
+
+      route: '/deaf-lumina',
+
+    }
+
+  ]
+
+},
+
+];, getting this error "Object literal may only specify known properties, and 'externalUrl' does not exist in type 'SubjectGame'." and this is my home Screen "import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+
+import { useNavigate } from 'react-router-dom';
+
+import { AnimatePresence, motion } from 'framer-motion';
+
+import { useHandTracking } from '../../hooks/useHandTracking';
+
+import { GestureCursor } from './GestureCursor';
+
+import { Mascot } from './Mascot';
+
+import { SubjectCard } from './SubjectCard';
+
+import {
+
+  MascotDialogueGroup,
+
+  MascotState,
+
+  mascotDialogues,
+
+} from '../../data/mascotConfig';
+
+import { subjects } from '../../data/subjects';
+
+
+
+const HOLD_DURATION_MS = 1000;
+
+const SPEECH_RATE = 0.9;
+
+const SPEECH_PITCH = 1.1;
+
+
+
+function pickRandom<T>(items: T[]) {
+
+  return items[Math.floor(Math.random() * items.length)];
+
+}
+
+
+
+type HoverTarget =
+
+  | { type: 'subject'; id: string }
+
+  | { type: 'game'; id: string }
+
+  | { type: 'popup-back'; id: 'popup-back' }
+
+  | null;
+
+
+
+export function HomeScreen() {
+
+  const navigate = useNavigate();
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const { cursor, isReady: handTrackingReady } = useHandTracking(videoRef);
+
+
+
+  const [cameraStatus, setCameraStatus] = useState<'initializing' | 'ready' | 'error'>('initializing');
+
+  const [hoveredTarget, setHoveredTarget] = useState<HoverTarget>(null);
+
+  const [holdProgress, setHoldProgress] = useState(0);
+
+  const [selectedSubjectId, setSelectedSubjectId] = useState<string | null>(null);
+
+  const [mascotState, setMascotStateValue] = useState<MascotState>('idle');
+
+  const [mascotLine, setMascotLine] = useState('');
+
+  const [mascotNonce, setMascotNonce] = useState(0);
+
+
+
+  const audioContextRef = useRef<AudioContext | null>(null);
+
+  const hoverTimeoutRef = useRef<number | null>(null);
+
+  const holdFrameRef = useRef<number | null>(null);
+
+  const holdTargetRef = useRef<string | null>(null);
+
+  const holdStartedAtRef = useRef(0);
+
+  const didWelcomeRef = useRef(false);
+
+  const hoveredRef = useRef<string | null>(null);
+
+  const speechTimeoutRef = useRef<number | null>(null);
+
+  const mascotResetRef = useRef<number | null>(null);
+
+  const subjectRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+
+  const popupGameRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+
+  const popupBackRef = useRef<HTMLButtonElement | null>(null);
+
+  const previousPinchRef = useRef(false);
+
+
+
+  const selectedSubject = useMemo(
+
+    () => subjects.find((subject) => subject.id === selectedSubjectId) ?? null,
+
+    [selectedSubjectId],
+
+  );
+
+
+
+  const isHomeReady = cameraStatus === 'ready' && handTrackingReady;
+
+
+
+  const clearHoldLoop = useCallback(() => {
+
+    if (holdFrameRef.current) {
+
+      cancelAnimationFrame(holdFrameRef.current);
+
+      holdFrameRef.current = null;
+
+    }
+
+    holdTargetRef.current = null;
+
+    holdStartedAtRef.current = 0;
+
+    setHoldProgress(0);
+
+  }, []);
+
+
+
+  const clearMascotTimers = useCallback(() => {
+
+    if (speechTimeoutRef.current) {
+
+      window.clearTimeout(speechTimeoutRef.current);
+
+      speechTimeoutRef.current = null;
+
+    }
+
+    if (mascotResetRef.current) {
+
+      window.clearTimeout(mascotResetRef.current);
+
+      mascotResetRef.current = null;
+
+    }
+
+  }, []);
+
+
+
+  const setMascotState = useCallback((state: MascotState, duration?: number) => {
+
+    clearMascotTimers();
+
+    setMascotStateValue(state);
+
+    setMascotNonce((value) => value + 1);
+
+
+
+    if (duration) {
+
+      mascotResetRef.current = window.setTimeout(() => {
+
+        setMascotStateValue('idle');
+
+        setMascotNonce((value) => value + 1);
+
+      }, duration);
+
+    }
+
+  }, [clearMascotTimers]);
+
+
+
+  const mascotSpeak = useCallback((text: string) => {
+
+    clearMascotTimers();
+
+    setMascotLine(text);
+
+    setMascotStateValue('talking');
+
+    setMascotNonce((value) => value + 1);
+
+
+
+    const synth = typeof window !== 'undefined' ? window.speechSynthesis : null;
+
+
+
+    if (synth) {
+
+      synth.cancel();
+
+      const utterance = new SpeechSynthesisUtterance(text);
+
+      utterance.rate = SPEECH_RATE;
+
+      utterance.pitch = SPEECH_PITCH;
+
+      utterance.onend = () => {
+
+        setMascotStateValue('idle');
+
+        setMascotNonce((value) => value + 1);
+
+      };
+
+      synth.speak(utterance);
+
+    } else {
+
+      speechTimeoutRef.current = window.setTimeout(() => {
+
+        setMascotStateValue('idle');
+
+        setMascotNonce((value) => value + 1);
+
+      }, 1200);
+
+    }
+
+  }, [clearMascotTimers]);
+
+
+
+  const speakDialogue = useCallback((group: MascotDialogueGroup, reaction?: MascotState) => {
+
+    if (reaction) {
+
+      setMascotState(reaction, 550);
+
+      window.setTimeout(() => mascotSpeak(pickRandom(mascotDialogues[group])), 280);
+
+      return;
+
+    }
+
+    mascotSpeak(pickRandom(mascotDialogues[group]));
+
+  }, [mascotSpeak, setMascotState]);
+
+
+
+  const ensureAudioContext = useCallback(() => {
+
+    if (typeof window === 'undefined') return null;
+
+    const AudioContextCtor = window.AudioContext || (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+
+    if (!AudioContextCtor) return null;
+
+    if (!audioContextRef.current) {
+
+      audioContextRef.current = new AudioContextCtor();
+
+    }
+
+    if (audioContextRef.current.state === 'suspended') {
+
+      void audioContextRef.current.resume();
+
+    }
+
+    return audioContextRef.current;
+
+  }, []);
+
+
+
+  const playUiSound = useCallback((type: 'hover' | 'select') => {
+
+    const context = ensureAudioContext();
+
+    if (!context) return;
+
+
+
+    const oscillator = context.createOscillator();
+
+    const gainNode = context.createGain();
+
+    oscillator.connect(gainNode);
+
+    gainNode.connect(context.destination);
+
+
+
+    if (type === 'hover') {
+
+      oscillator.type = 'triangle';
+
+      oscillator.frequency.setValueAtTime(540, context.currentTime);
+
+      oscillator.frequency.exponentialRampToValueAtTime(700, context.currentTime + 0.12);
+
+      gainNode.gain.setValueAtTime(0.0001, context.currentTime);
+
+      gainNode.gain.exponentialRampToValueAtTime(0.06, context.currentTime + 0.02);
+
+      gainNode.gain.exponentialRampToValueAtTime(0.0001, context.currentTime + 0.15);
+
+      oscillator.start(context.currentTime);
+
+      oscillator.stop(context.currentTime + 0.15);
+
+      return;
+
+    }
+
+
+
+    oscillator.type = 'square';
+
+    oscillator.frequency.setValueAtTime(420, context.currentTime);
+
+    oscillator.frequency.exponentialRampToValueAtTime(880, context.currentTime + 0.18);
+
+    gainNode.gain.setValueAtTime(0.0001, context.currentTime);
+
+    gainNode.gain.exponentialRampToValueAtTime(0.1, context.currentTime + 0.02);
+
+    gainNode.gain.exponentialRampToValueAtTime(0.0001, context.currentTime + 0.2);
+
+    oscillator.start(context.currentTime);
+
+    oscillator.stop(context.currentTime + 0.2);
+
+  }, [ensureAudioContext]);
+
+
+
+  const openSubjectMenu = useCallback((subjectId: string) => {
+
+    if (hoverTimeoutRef.current) {
+
+      window.clearTimeout(hoverTimeoutRef.current);
+
+      hoverTimeoutRef.current = null;
+
+    }
+
+    setSelectedSubjectId(subjectId);
+
+    playUiSound('select');
+
+    speakDialogue('success', 'happy');
+
+    clearHoldLoop();
+
+    setHoveredTarget(null);
+
+    hoveredRef.current = null;
+
+  }, [clearHoldLoop, playUiSound, setHoveredTarget, speakDialogue]);
+
+
+
+  const updateHoverTarget = useCallback((nextTarget: HoverTarget) => {
+
+    const nextHoverId = nextTarget ? `${nextTarget.type}:${nextTarget.id}` : null;
+
+    if (hoveredRef.current === nextHoverId) return;
+
+
+
+    hoveredRef.current = nextHoverId;
+
+    setHoveredTarget(nextTarget);
+
+    clearHoldLoop();
+
+
+
+    if (hoverTimeoutRef.current) {
+
+      window.clearTimeout(hoverTimeoutRef.current);
+
+      hoverTimeoutRef.current = null;
+
+    }
+
+
+
+    if (nextTarget) {
+
+      playUiSound('hover');
+
+      setMascotState('hover', 700);
+
+      hoverTimeoutRef.current = window.setTimeout(() => {
+
+        mascotSpeak(pickRandom(mascotDialogues.hover));
+
+      }, 160);
+
+    } else {
+
+      setMascotState('idle');
+
+    }
+
+  }, [clearHoldLoop, mascotSpeak, playUiSound, setMascotState]);
+
+
+
+  const beginHoldLoop = useCallback((targetKey: string) => {
+
+    clearHoldLoop();
+
+    holdTargetRef.current = targetKey;
+
+    holdStartedAtRef.current = performance.now();
+
+
+
+    const tick = (time: number) => {
+
+      if (holdTargetRef.current !== targetKey) return;
+
+
+
+      const progress = Math.min((time - holdStartedAtRef.current) / HOLD_DURATION_MS, 1);
+
+      setHoldProgress(progress);
+
+      holdFrameRef.current = requestAnimationFrame(tick);
+
+    };
+
+
+
+    holdFrameRef.current = requestAnimationFrame(tick);
+
+  }, [clearHoldLoop]);
+
+
+
+  useEffect(() => {
+
+    let stream: MediaStream | null = null;
+
+    let alive = true;
+
+
+
+    async function setupCamera() {
+
+      if (!videoRef.current) return;
+
+      try {
+
+        const nextStream = await navigator.mediaDevices.getUserMedia({
+
+          video: {
+
+            width: { ideal: 640 },
+
+            height: { ideal: 480 },
+
+            frameRate: { ideal: 30 },
+
+            facingMode: 'user',
+
+          },
+
+        });
+
+        if (!alive || !videoRef.current) {
+
+          nextStream.getTracks().forEach((track) => track.stop());
+
+          return;
+
+        }
+
+
+
+        stream = nextStream;
+
+        videoRef.current.srcObject = nextStream;
+
+        videoRef.current.onloadedmetadata = async () => {
+
+          await videoRef.current?.play();
+
+          setCameraStatus('ready');
+
+        };
+
+      } catch (error) {
+
+        console.error('Error accessing webcam on home screen:', error);
+
+        if (alive) setCameraStatus('error');
+
+      }
+
+    }
+
+
+
+    setupCamera();
+
+
+
+    return () => {
+
+      alive = false;
+
+      stream?.getTracks().forEach((track) => track.stop());
+
+      window.speechSynthesis?.cancel();
+
+      clearHoldLoop();
+
+      clearMascotTimers();
+
+      if (hoverTimeoutRef.current) window.clearTimeout(hoverTimeoutRef.current);
+
+    };
+
+  }, [clearHoldLoop, clearMascotTimers]);
+
+
+
+  useEffect(() => {
+
+    if (!isHomeReady || didWelcomeRef.current) return;
+
+    didWelcomeRef.current = true;
+
+    mascotSpeak(mascotDialogues.home.join(' '));
+
+  }, [isHomeReady, mascotSpeak]);
+
+
+
+  useEffect(() => {
+
+    if (selectedSubjectId) {
+
+      clearHoldLoop();
+
+    }
+
+
+
+    if (!cursor || !isHomeReady) {
+
+      updateHoverTarget(null);
+
+      return;
+
+    }
+
+
+
+    const pointX = cursor.x * window.innerWidth;
+
+    const pointY = cursor.y * window.innerHeight;
+
+
+
+    let nextTarget: HoverTarget = null;
+
+
+
+    if (selectedSubject) {
+
+      if (popupBackRef.current) {
+
+        const rect = popupBackRef.current.getBoundingClientRect();
+
+        if (pointX >= rect.left && pointX <= rect.right && pointY >= rect.top && pointY <= rect.bottom) {
+
+          nextTarget = { type: 'popup-back', id: 'popup-back' };
+
+        }
+
+      }
+
+
+
+      if (!nextTarget) {
+
+        for (const game of selectedSubject.games) {
+
+          const element = popupGameRefs.current[game.id];
+
+          if (!element) continue;
+
+          const rect = element.getBoundingClientRect();
+
+          if (pointX >= rect.left && pointX <= rect.right && pointY >= rect.top && pointY <= rect.bottom) {
+
+            nextTarget = { type: 'game', id: game.id };
+
+            break;
+
+          }
+
+        }
+
+      }
+
+    } else {
+
+      for (const subject of subjects) {
+
+        const element = subjectRefs.current[subject.id];
+
+        if (!element) continue;
+
+        const rect = element.getBoundingClientRect();
+
+        if (pointX >= rect.left && pointX <= rect.right && pointY >= rect.top && pointY <= rect.bottom) {
+
+          nextTarget = { type: 'subject', id: subject.id };
+
+          break;
+
+        }
+
+      }
+
+    }
+
+
+
+    updateHoverTarget(nextTarget);
+
+  }, [clearHoldLoop, cursor, isHomeReady, selectedSubject, selectedSubjectId, updateHoverTarget]);
+
+
+
+  useEffect(() => {
+
+    if (!hoveredTarget) return;
+
+    beginHoldLoop(`${hoveredTarget.type}:${hoveredTarget.id}`);
+
+    return clearHoldLoop;
+
+  }, [beginHoldLoop, clearHoldLoop, hoveredTarget]);
+
+
+
+  const resetSelection = useCallback(() => {
+
+    setSelectedSubjectId(null);
+
+    setHoveredTarget(null);
+
+    setMascotState('idle');
+
+    mascotSpeak('Pick a subject!');
+
+  }, [mascotSpeak, setHoveredTarget, setMascotState]);
+
+
+
+  const launchGame = useCallback((route?: string) => {
+
+    if (!route) {
+
+      setMascotState('thinking', 900);
+
+      mascotSpeak(pickRandom(mascotDialogues.error));
+
+      return;
+
+    }
+
+
+
+    playUiSound('select');
+
+    navigate(route);
+
+  }, [mascotSpeak, navigate, playUiSound, setMascotState]);
+
+
+
+  useEffect(() => {
+
+    const nextIsPinching = Boolean(cursor?.isPinching);
+
+    const didClick = nextIsPinching && !previousPinchRef.current;
+
+    previousPinchRef.current = nextIsPinching;
+
+
+
+    if (!didClick || !hoveredTarget) return;
+
+
+
+    if (hoveredTarget.type === 'subject') {
+
+      openSubjectMenu(hoveredTarget.id);
+
+      return;
+
+    }
+
+
+
+    if (hoveredTarget.type === 'popup-back') {
+
+      resetSelection();
+
+      return;
+
+    }
+
+
+
+    if (hoveredTarget.type === 'game' && selectedSubject) {
+
+      const targetGame = selectedSubject.games.find((game) => game.id === hoveredTarget.id);
+
+      launchGame(targetGame?.route);
+
+    }
+
+  }, [cursor?.isPinching, hoveredTarget, launchGame, openSubjectMenu, resetSelection, selectedSubject]);
+
+
+
+  const homeTitleStyle = {
+
+    fontFamily: '"Comic Sans MS", "Trebuchet MS", "Marker Felt", sans-serif',
+
+    WebkitTextStroke: '5px #7c3aed',
+
+    textShadow: '0 8px 0 rgba(255, 255, 255, 0.24)',
+
+  } as const;
+
+
+
+  return (
+
+    <main className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+
+      <video
+
+        src="/homebg.mp4"
+
+        autoPlay
+
+        muted
+
+        loop
+
+        playsInline
+
+        className="absolute inset-0 h-full w-full object-cover scale-105 blur-[3px]"
+
+      />
+
+      <div className="absolute inset-0 bg-black/40" />
+
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.18),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(34,211,238,0.18),transparent_30%),radial-gradient(circle_at_top_right,rgba(250,204,21,0.18),transparent_26%)]" />
+
+
+
+      <video ref={videoRef} playsInline muted className="absolute h-0 w-0 opacity-0 pointer-events-none" />
+
+
+
+      <div className="relative z-10 min-h-screen px-5 pb-10 pt-8 sm:px-8 lg:px-12">
+
+        <motion.div
+
+          initial={{ opacity: 0, y: -24 }}
+
+          animate={{ opacity: 1, y: 0 }}
+
+          className="mx-auto flex max-w-6xl flex-col gap-8"
+
+        >
+
+          <div className="max-w-3xl">
+
+            <div className="flex flex-wrap items-center gap-3">
+
+              <p
+
+                className="inline-flex rounded-full border-[4px] border-white bg-pink-400 px-4 py-2 text-sm font-black uppercase tracking-[0.25em] text-white shadow-[0_10px_0_rgba(0,0,0,0.15)]"
+
+                style={{ fontFamily: '"Comic Sans MS", "Trebuchet MS", "Marker Felt", sans-serif' }}
+
+              >
+
+                Wave to Choose
+
+              </p>
+
+            </div>
+
+            <h1
+
+              className="mt-5 text-5xl font-black leading-[0.95] sm:text-7xl lg:text-8xl"
+
+              style={homeTitleStyle}
+
+            >
+
+              PlaySpark
+
+              <br />
+
+              Learning Land
+
+            </h1>
+
+            <p
+
+              className="mt-4 max-w-2xl text-lg font-black text-yellow-100 sm:text-2xl"
+
+              style={{
+
+                fontFamily: '"Comic Sans MS", "Trebuchet MS", "Marker Felt", sans-serif',
+
+                WebkitTextStroke: '2px #7c2d12',
+
+              }}
+
+            >
+
+              Float your finger over a subject card, then pinch in the air to pop it open.
+
+            </p>
+
+          </div>
+
+
+
+          <div className="grid gap-5 sm:grid-cols-2 xl:max-w-4xl">
+
+            {subjects.map((subject) => (
+
+              <div key={subject.id} className="contents">
+
+                <SubjectCard
+
+                  subject={subject}
+
+                  isHovered={hoveredTarget?.type === 'subject' && hoveredTarget.id === subject.id}
+
+                  holdProgress={hoveredTarget?.type === 'subject' && hoveredTarget.id === subject.id ? holdProgress : 0}
+
+                  onClick={() => openSubjectMenu(subject.id)}
+
+                  onMouseEnter={() => updateHoverTarget({ type: 'subject', id: subject.id })}
+
+                  onMouseLeave={() => updateHoverTarget(null)}
+
+                  setRef={(element) => {
+
+                    subjectRefs.current[subject.id] = element;
+
+                  }}
+
+                />
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </motion.div>
+
+      </div>
+
+
+
+      <AnimatePresence>
+
+        {!isHomeReady && cameraStatus !== 'error' && (
+
+          <motion.div
+
+            initial={{ opacity: 0, y: 14 }}
+
+            animate={{ opacity: 1, y: 0 }}
+
+            exit={{ opacity: 0, y: 10 }}
+
+            className="absolute left-6 top-6 z-[60] rounded-[30px] border-[4px] border-white bg-cyan-400 px-5 py-3 shadow-[0_14px_0_rgba(0,0,0,0.18)]"
+
+          >
+
+            <p
+
+              className="text-lg font-black text-slate-900"
+
+              style={{ fontFamily: '"Comic Sans MS", "Trebuchet MS", "Marker Felt", sans-serif' }}
+
+            >
+
+              Camera waking up...
+
+            </p>
+
+          </motion.div>
+
+        )}
+
+      </AnimatePresence>
+
+
+
+      <AnimatePresence>
+
+        {cameraStatus === 'error' && (
+
+          <motion.div
+
+            initial={{ opacity: 0 }}
+
+            animate={{ opacity: 1 }}
+
+            exit={{ opacity: 0 }}
+
+            className="absolute inset-0 z-[80] flex items-center justify-center bg-slate-950/85 px-6"
+
+          >
+
+            <div className="max-w-xl rounded-[36px] border-[5px] border-white bg-rose-400 p-8 text-center shadow-[0_22px_0_rgba(0,0,0,0.18)]">
+
+              <p
+
+                className="text-3xl font-black text-white"
+
+                style={{ fontFamily: '"Comic Sans MS", "Trebuchet MS", "Marker Felt", sans-serif' }}
+
+              >
+
+                Camera needed!
+
+              </p>
+
+              <p className="mt-4 text-lg font-black text-rose-950">
+
+                Let PlaySpark see your hand so the cards can light up and respond.
+
+              </p>
+
+              <button
+
+                type="button"
+
+                onClick={() => window.location.reload()}
+
+                className="mt-6 rounded-[24px] border-[4px] border-white bg-yellow-300 px-6 py-3 text-lg font-black text-rose-700 shadow-[0_10px_0_rgba(0,0,0,0.16)]"
+
+                style={{ fontFamily: '"Comic Sans MS", "Trebuchet MS", "Marker Felt", sans-serif' }}
+
+              >
+
+                Try Again
+
+              </button>
+
+            </div>
+
+          </motion.div>
+
+        )}
+
+      </AnimatePresence>
+
+
+
+      <AnimatePresence>
+
+        {selectedSubject && (
+
+          <motion.div
+
+            initial={{ opacity: 0, scale: 0.92 }}
+
+            animate={{ opacity: 1, scale: 1 }}
+
+            exit={{ opacity: 0, scale: 0.96 }}
+
+            className="absolute inset-0 z-[65] flex items-center justify-center bg-slate-950/65 px-5"
+
+          >
+
+            <div className="w-full max-w-2xl rounded-[42px] border-[5px] border-white bg-white/92 p-6 shadow-[0_26px_0_rgba(0,0,0,0.18)] backdrop-blur-md">
+
+              <div className="flex items-start justify-between gap-4">
+
+                <div>
+
+                  <p
+
+                    className="text-base font-black uppercase tracking-[0.3em]"
+
+                    style={{ color: selectedSubject.accent, fontFamily: '"Comic Sans MS", "Trebuchet MS", "Marker Felt", sans-serif' }}
+
+                  >
+
+                    {selectedSubject.name}
+
+                  </p>
+
+                  <h2
+
+                    className="mt-2 text-4xl font-black text-white"
+
+                    style={{
+
+                      fontFamily: '"Comic Sans MS", "Trebuchet MS", "Marker Felt", sans-serif',
+
+                      WebkitTextStroke: `4px ${selectedSubject.textStroke}`,
+
+                    }}
+
+                  >
+
+                    Choose a game
+
+                  </h2>
+
+                </div>
+
+                <button
+
+                  ref={popupBackRef}
+
+                  type="button"
+
+                  onClick={resetSelection}
+
+                  onMouseEnter={() => updateHoverTarget({ type: 'popup-back', id: 'popup-back' })}
+
+                  onMouseLeave={() => updateHoverTarget(null)}
+
+                  className="rounded-full border-[4px] border-white bg-rose-400 px-4 py-2 text-lg font-black text-white shadow-[0_8px_0_rgba(0,0,0,0.16)]"
+
+                >
+
+                  Back
+
+                </button>
+
+              </div>
+
+
+
+              <div className="mt-6 grid gap-4">
+
+                {selectedSubject.games.map((game) => (
+
+                  <motion.button
+
+                    key={game.id}
+
+                    ref={(element) => {
+
+                      popupGameRefs.current[game.id] = element;
+
+                    }}
+
+                    type="button"
+
+                    whileHover={{ scale: 1.03, rotate: -1 }}
+
+                    whileTap={{ scale: 0.98 }}
+
+                    onClick={() => launchGame(game.route)}
+
+                    onMouseEnter={() => updateHoverTarget({ type: 'game', id: game.id })}
+
+                    onMouseLeave={() => updateHoverTarget(null)}
+
+                    animate={{
+
+                      scale: hoveredTarget?.type === 'game' && hoveredTarget.id === game.id ? 1.035 : 1,
+
+                      y: hoveredTarget?.type === 'game' && hoveredTarget.id === game.id ? -4 : 0,
+
+                    }}
+
+                    transition={{ type: 'spring', stiffness: 260, damping: 18 }}
+
+                    className="rounded-[30px] border-[5px] border-white bg-sky-200 p-5 text-left shadow-[0_14px_0_rgba(0,0,0,0.16)]"
+
+                    style={{
+
+                      boxShadow: `0 14px 0 rgba(0, 0, 0, 0.16), 0 0 0 5px ${selectedSubject.accent}`,
+
+                    }}
+
+                  >
+
+                    <div className="flex items-center justify-between gap-4">
+
+                      <div>
+
+                        <h3
+
+                          className="text-2xl font-black text-white"
+
+                          style={{
+
+                            fontFamily: '"Comic Sans MS", "Trebuchet MS", "Marker Felt", sans-serif',
+
+                            WebkitTextStroke: `3px ${selectedSubject.textStroke}`,
+
+                          }}
+
+                        >
+
+                          {game.title}
+
+                        </h3>
+
+                        <p className="mt-2 text-base font-black text-slate-700">{game.description}</p>
+
+                      </div>
+
+                      <div className="rounded-full border-[4px] border-white bg-white px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-slate-800">
+
+                        {game.status === 'ready' ? 'Play' : 'Soon'}
+
+                      </div>
+
+                    </div>
+
+                  </motion.button>
+
+                ))}
+
+              </div>
+
+            </div>
+
+          </motion.div>
+
+        )}
+
+      </AnimatePresence>
+
+
+
+      <Mascot state={mascotState} line={mascotLine} nonce={mascotNonce} />
+
+      <GestureCursor cursor={cursor} holdProgress={holdProgress} isVisible={isHomeReady} />
+
+    </main>
+
+  );
+
+}
+
+" give me complete working code that add these games clearly and precisely "this is my deaf-practice game url"https://playguugle-deaf.vercel.app/"
+
+this is my excercise game url  "https://exercisesfinal.vercel.app/"
+
+football game "https://game-five-flax.vercel.app/"" in subjects respective i have mentioned , give me complete working code for each file 

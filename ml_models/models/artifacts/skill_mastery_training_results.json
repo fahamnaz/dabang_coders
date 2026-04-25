@@ -1,0 +1,68 @@
+{
+  "phonics": {
+    "auc": 0.9998,
+    "brier": 0.0042,
+    "n_train": 3535,
+    "n_val": 884
+  },
+  "letter_recognition": {
+    "auc": 0.9937,
+    "brier": 0.0061,
+    "n_train": 3527,
+    "n_val": 882
+  },
+  "counting": {
+    "auc": 0.9996,
+    "brier": 0.0049,
+    "n_train": 3340,
+    "n_val": 836
+  },
+  "number_order": {
+    "auc": 0.9872,
+    "brier": 0.0103,
+    "n_train": 3455,
+    "n_val": 864
+  },
+  "shape_recognition": {
+    "auc": 0.9767,
+    "brier": 0.0084,
+    "n_train": 3390,
+    "n_val": 848
+  },
+  "color_sorting": {
+    "auc": 0.9995,
+    "brier": 0.0045,
+    "n_train": 3473,
+    "n_val": 869
+  },
+  "hand_eye_coordination": {
+    "auc": 0.9956,
+    "brier": 0.0163,
+    "n_train": 3515,
+    "n_val": 879
+  },
+  "attention_retention": {
+    "auc": 0.9661,
+    "brier": 0.0138,
+    "n_train": 3477,
+    "n_val": 870
+  },
+  "memory_recall": {
+    "auc": 0.9794,
+    "brier": 0.0087,
+    "n_train": 3472,
+    "n_val": 868
+  },
+  "social_response": {
+    "auc": 0.9918,
+    "brier": 0.0027,
+    "n_train": 3469,
+    "n_val": 868
+  },
+  "emotional_regulation": {
+    "auc": 0.9831,
+    "brier": 0.0101,
+    "n_train": 3536,
+    "n_val": 885
+  }
+}

@@ -1,0 +1,411 @@
+{
+  "pipeline_meta": {
+    "child_id": "564e80be-a18d-4f61-b58a-3f61199e1122",
+    "session_id": "demo_session_001",
+    "processed_at": "2026-04-25T03:23:10.835029+00:00",
+    "inference_ms": 3.78,
+    "models_trained": {
+      "skill_mastery": true,
+      "engagement": true
+    },
+    "n_events": 25
+  },
+  "skill_graph": {
+    "child_id": "564e80be-a18d-4f61-b58a-3f61199e1122",
+    "session_id": "demo_session_001",
+    "generated_at": "2026-04-25T03:23:10.834837+00:00",
+    "skill_nodes": [
+      {
+        "skill_name": "phonics",
+        "skill_display_name": "Phonics & Sounds",
+        "mastery_prob": 0.285,
+        "mastery_class": "low",
+        "previous_mastery": 0.3,
+        "confidence": 0.4,
+        "trend": "stable",
+        "regression_flagged": false,
+        "reinforcement_need": "high",
+        "prerequisite_skills": [
+          "letter_recognition"
+        ],
+        "prerequisite_met": false,
+        "unlocked": false,
+        "evidence_summary": "No data yet for Phonics & Sounds. Estimate based on age group.",
+        "cold_start": true,
+        "last_updated": "2026-04-25T03:23:10.834837+00:00",
+        "session_id": "demo_session_001"
+      },
+      {
+        "skill_name": "letter_recognition",
+        "skill_display_name": "Letter Recognition",
+        "mastery_prob": 0.35,
+        "mastery_class": "low",
+        "previous_mastery": 0.35,
+        "confidence": 0.4,
+        "trend": "stable",
+        "regression_flagged": false,
+        "reinforcement_need": "high",
+        "prerequisite_skills": [],
+        "prerequisite_met": true,
+        "unlocked": true,
+        "evidence_summary": "No data yet for Letter Recognition. Estimate based on age group.",
+        "cold_start": true,
+        "last_updated": "2026-04-25T03:23:10.834837+00:00",
+        "session_id": "demo_session_001"
+      },
+      {
+        "skill_name": "counting",
+        "skill_display_name": "Counting",
+        "mastery_prob": 0.535,
+        "mastery_class": "developing",
+        "previous_mastery": 0.55,
+        "confidence": 0.4,
+        "trend": "stable",
+        "regression_flagged": false,
+        "reinforcement_need": "low",
+        "prerequisite_skills": [],
+        "prerequisite_met": true,
+        "unlocked": true,
+        "evidence_summary": "No data yet for Counting. Estimate based on age group.",
+        "cold_start": true,
+        "last_updated": "2026-04-25T03:23:10.834837+00:00",
+        "session_id": "demo_session_001"
+      },
+      {
+        "skill_name": "number_order",
+        "skill_display_name": "Number Order",
+        "mastery_prob": 0.3,
+        "mastery_class": "low",
+        "previous_mastery": 0.3,
+        "confidence": 0.4,
+        "trend": "stable",
+        "regression_flagged": false,
+        "reinforcement_need": "high",
+        "prerequisite_skills": [
+          "counting"
+        ],
+        "prerequisite_met": true,
+        "unlocked": true,
+        "evidence_summary": "No data yet for Number Order. Estimate based on age group.",
+        "cold_start": true,
+        "last_updated": "2026-04-25T03:23:10.834837+00:00",
+        "session_id": "demo_session_001"
+      },
+      {
+        "skill_name": "shape_recognition",
+        "skill_display_name": "Shape Recognition",
+        "mastery_prob": 0.55,
+        "mastery_class": "developing",
+        "previous_mastery": 0.55,
+        "confidence": 0.4,
+        "trend": "stable",
+        "regression_flagged": false,
+        "reinforcement_need": "low",
+        "prerequisite_skills": [],
+        "prerequisite_met": true,
+        "unlocked": true,
+        "evidence_summary": "No data yet for Shape Recognition. Estimate based on age group.",
+        "cold_start": true,
+        "last_updated": "2026-04-25T03:23:10.834837+00:00",
+        "session_id": "demo_session_001"
+      },
+      {
+        "skill_name": "color_sorting",
+        "skill_display_name": "Color Sorting",
+        "mastery_prob": 0.6,
+        "mastery_class": "developing",
+        "previous_mastery": 0.6,
+        "confidence": 0.4,
+        "trend": "stable",
+        "regression_flagged": false,
+        "reinforcement_need": "low",
+        "prerequisite_skills": [
+          "shape_recognition"
+        ],
+        "prerequisite_met": true,
+        "unlocked": true,
+        "evidence_summary": "No data yet for Color Sorting. Estimate based on age group.",
+        "cold_start": true,
+        "last_updated": "2026-04-25T03:23:10.834837+00:00",
+        "session_id": "demo_session_001"
+      },
+      {
+        "skill_name": "hand_eye_coordination",
+        "skill_display_name": "Hand-Eye Coordination",
+        "mastery_prob": 0.45,
+        "mastery_class": "developing",
+        "previous_mastery": 0.45,
+        "confidence": 0.4,
+        "trend": "stable",
+        "regression_flagged": false,
+        "reinforcement_need": "low",
+        "prerequisite_skills": [],
+        "prerequisite_met": true,
+        "unlocked": true,
+        "evidence_summary": "No data yet for Hand-Eye Coordination. Estimate based on age group.",
+        "cold_start": true,
+        "last_updated": "2026-04-25T03:23:10.834837+00:00",
+        "session_id": "demo_session_001"
+      },
+      {
+        "skill_name": "attention_retention",
+        "skill_display_name": "Focus & Attention",
+        "mastery_prob": 0.35,
+        "mastery_class": "low",
+        "previous_mastery": 0.35,
+        "confidence": 0.4,
+        "trend": "stable",
+        "regression_flagged": false,
+        "reinforcement_need": "high",
+        "prerequisite_skills": [],
+        "prerequisite_met": true,
+        "unlocked": true,
+        "evidence_summary": "No data yet for Focus & Attention. Estimate based on age group.",
+        "cold_start": true,
+        "last_updated": "2026-04-25T03:23:10.834837+00:00",
+        "session_id": "demo_session_001"
+      },
+      {
+        "skill_name": "memory_recall",
+        "skill_display_name": "Memory",
+        "mastery_prob": 0.3,
+        "mastery_class": "low",
+        "previous_mastery": 0.3,
+        "confidence": 0.4,
+        "trend": "stable",
+        "regression_flagged": false,
+        "reinforcement_need": "high",
+        "prerequisite_skills": [
+          "attention_retention"
+        ],
+        "prerequisite_met": false,
+        "unlocked": false,
+        "evidence_summary": "No data yet for Memory. Estimate based on age group.",
+        "cold_start": true,
+        "last_updated": "2026-04-25T03:23:10.834837+00:00",
+        "session_id": "demo_session_001"
+      },
+      {
+        "skill_name": "social_response",
+        "skill_display_name": "Social Awareness",
+        "mastery_prob": 0.5,
+        "mastery_class": "developing",
+        "previous_mastery": 0.5,
+        "confidence": 0.4,
+        "trend": "stable",
+        "regression_flagged": false,
+        "reinforcement_need": "low",
+        "prerequisite_skills": [],
+        "prerequisite_met": true,
+        "unlocked": true,
+        "evidence_summary": "No data yet for Social Awareness. Estimate based on age group.",
+        "cold_start": true,
+        "last_updated": "2026-04-25T03:23:10.834837+00:00",
+        "session_id": "demo_session_001"
+      },
+      {
+        "skill_name": "emotional_regulation",
+        "skill_display_name": "Emotional Understanding",
+        "mastery_prob": 0.38,
+        "mastery_class": "low",
+        "previous_mastery": 0.38,
+        "confidence": 0.4,
+        "trend": "stable",
+        "regression_flagged": false,
+        "reinforcement_need": "high",
+        "prerequisite_skills": [
+          "social_response"
+        ],
+        "prerequisite_met": true,
+        "unlocked": true,
+        "evidence_summary": "No data yet for Emotional Understanding. Estimate based on age group.",
+        "cold_start": true,
+        "last_updated": "2026-04-25T03:23:10.834837+00:00",
+        "session_id": "demo_session_001"
+      }
+    ],
+    "summary": {
+      "skills_mastered": [],
+      "skills_developing": [
+        "counting",
+        "shape_recognition",
+        "color_sorting",
+        "hand_eye_coordination",
+        "social_response"
+      ],
+      "skills_need_support": [
+        "phonics",
+        "letter_recognition",
+        "number_order",
+        "attention_retention",
+        "memory_recall",
+        "emotional_regulation"
+      ],
+      "skills_regressing": [],
+      "skills_unlocked": [
+        "letter_recognition",
+        "counting",
+        "number_order",
+        "shape_recognition",
+        "color_sorting",
+        "hand_eye_coordination",
+        "attention_retention",
+        "social_response",
+        "emotional_regulation"
+      ],
+      "overall_progress_pct": 41.8
+    }
+  },
+  "engagement_state": {
+    "engagement_state": "neutral",
+    "fatigue_risk": 0.0,
+    "attention_level": 0.0,
+    "confidence": 1.0,
+    "probabilities": {
+      "fatigued": 0.0,
+      "neutral": 1.0,
+      "engaged": 0.0
+    },
+    "alert_level": "none",
+    "cold_start": false
+  },
+  "next_activity": {
+    "child_id": "564e80be-a18d-4f61-b58a-3f61199e1122",
+    "session_id": "demo_session_001",
+    "next_task_id": "task_color_sorting_2_visual",
+    "next_skill_focus": "color_sorting",
+    "next_skill_display": "Color Sorting",
+    "next_modality": "visual",
+    "next_difficulty": 2,
+    "next_difficulty_label": "easy",
+    "hint_intensity": "low",
+    "reward_type": "sparkle",
+    "session_length_adjustment": {
+      "remaining_seconds": 180,
+      "action": "maintain"
+    },
+    "end_session": false,
+    "parent_tip": "Color Sorting is developing well. Keep up the regular practice!",
+    "reason": "color_sorting selected (developing mastery, 60%); difficulty held steady due to low confidence.",
+    "mastery_context": {
+      "skill": "color_sorting",
+      "mastery_prob": 0.6,
+      "mastery_class": "developing",
+      "confidence": 0.4
+    }
+  },
+  "parent_summary": {
+    "child_id": "564e80be-a18d-4f61-b58a-3f61199e1122",
+    "session_id": "demo_session_001",
+    "generated_at": "2026-04-25T03:23:10.834998+00:00",
+    "strengths": [],
+    "weak_areas": [
+      {
+        "skill": "phonics",
+        "display_name": "Phonics & Sounds",
+        "mastery_prob": 0.285,
+        "trend": "stable",
+        "note": "Phonics & Sounds is still developing \u2014 consistent practice helps."
+      },
+      {
+        "skill": "number_order",
+        "display_name": "Number Order",
+        "mastery_prob": 0.3,
+        "trend": "stable",
+        "note": "Number Order is still developing \u2014 consistent practice helps."
+      },
+      {
+        "skill": "memory_recall",
+        "display_name": "Memory",
+        "mastery_prob": 0.3,
+        "trend": "stable",
+        "note": "Memory is still developing \u2014 consistent practice helps."
+      },
+      {
+        "skill": "letter_recognition",
+        "display_name": "Letter Recognition",
+        "mastery_prob": 0.35,
+        "trend": "stable",
+        "note": "Letter Recognition is still developing \u2014 consistent practice helps."
+      },
+      {
+        "skill": "attention_retention",
+        "display_name": "Focus & Attention",
+        "mastery_prob": 0.35,
+        "trend": "stable",
+        "note": "Focus & Attention is still developing \u2014 consistent practice helps."
+      },
+      {
+        "skill": "emotional_regulation",
+        "display_name": "Emotional Understanding",
+        "mastery_prob": 0.38,
+        "trend": "stable",
+        "note": "Emotional Understanding is still developing \u2014 consistent practice helps."
+      }
+    ],
+    "best_learning_style": {
+      "modality": "visual",
+      "success_rate": 0.3,
+      "confidence": "moderate",
+      "display": "visual activities",
+      "note": "Your child learns best through visual activities \u2014 use pictures, colours and patterns."
+    },
+    "attention_trend": {
+      "quality": "moderate",
+      "engagement": "neutral",
+      "fatigue_risk": 0.0,
+      "note": "Focus was steady, with a few slower moments toward the end."
+    },
+    "recommended_offline_activity": "Point out letters on cereal boxes and signs.",
+    "parent_action": "Incorporate Phonics & Sounds into play \u2014 games and songs work well at this age.",
+    "confidence": "low",
+    "human_summary": "Aarav completed a 12-minute session today with good effort. Phonics & Sounds needs a little more practice \u2014 try the home activity suggestion below. Your child learns best through visual activities \u2014 use pictures, colours and patterns."
+  },
+  "session_summary": {
+    "child_id": "564e80be-a18d-4f61-b58a-3f61199e1122",
+    "session_id": "demo_session_001",
+    "generated_at": "2026-04-25T03:23:10.835023+00:00",
+    "duration_minutes": 12.0,
+    "tasks_completed": 25,
+    "overall_accuracy": 0.28,
+    "skills_practiced": [
+      "color_sorting",
+      "number_order",
+      "memory_recall",
+      "phonics",
+      "counting",
+      "social_response",
+      "emotional_regulation",
+      "attention_retention",
+      "hand_eye_coordination",
+      "letter_recognition",
+      "shape_recognition"
+    ],
+    "skills_improved": [],
+    "skills_improved_display": [],
+    "skills_needing_support": [
+      "number_order",
+      "memory_recall",
+      "phonics",
+      "emotional_regulation",
+      "attention_retention",
+      "letter_recognition"
+    ],
+    "skills_needing_support_display": [
+      "Number Order",
+      "Memory",
+      "Phonics & Sounds",
+      "Emotional Understanding",
+      "Focus & Attention",
+      "Letter Recognition"
+    ],
+    "engagement_notes": {
+      "state": "neutral",
+      "fatigue_risk": 0.0,
+      "duration_min": 12.0,
+      "note": "Steady engagement with some slower moments at 12.0 minutes."
+    },
+    "recommended_next_session_time": "later_today_or_tomorrow",
+    "summary_for_parent": "Aarav completed 25 activities in 12 minutes. Extra practice will help with: Number Order, Memory."
+  }
+}
