@@ -15,14 +15,17 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ─── MIDDLEWARE ──────────────────────────────────────────────
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:3001',
+  'http://localhost:3002',
+  'http://localhost:5173',
+  'http://127.0.0.1:3000',
+  process.env.FRONTEND_URL, // Add your Vercel URL here in Render Settings
+].filter(Boolean) as string[];
+
 app.use(cors({
-  origin: [
-    'http://localhost:3000', 
-    'http://localhost:3001', 
-    'http://localhost:3002', 
-    'http://localhost:5173', 
-    'http://127.0.0.1:3000'
-  ],
+  origin: allowedOrigins,
   credentials: true, // Required for cookies
 }));
 app.use(express.json());
