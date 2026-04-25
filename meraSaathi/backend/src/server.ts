@@ -25,8 +25,8 @@ const allowedOrigins = [
 ].filter(Boolean) as string[];
 
 app.use(cors({
-  origin: allowedOrigins,
-  credentials: true, // Required for cookies
+  origin: true, // Temporarily allow all origins for debugging
+  credentials: true,
 }));
 app.use(express.json());
 app.use(cookieParser());
