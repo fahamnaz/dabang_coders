@@ -32,7 +32,7 @@ export async function connectToDatabase(): Promise<Db> {
     return db;
   } catch (error) {
     console.error('❌ MongoDB connection failed:', error);
-    process.exit(1);
+    throw error; // Throwing ensures TS knows the function won't return undefined
   }
 }
 

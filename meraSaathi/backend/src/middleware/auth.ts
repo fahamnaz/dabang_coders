@@ -5,6 +5,7 @@ const JWT_SECRET = process.env.JWT_SECRET || 'playspark-dev-secret-change-me';
 
 export interface AuthRequest extends Request {
   userId?: string;
+  cookies: any; // Explicitly add cookies since cookie-parser augments the type
 }
 
 export function generateToken(userId: string): string {

@@ -36,7 +36,7 @@ app.use('/api/notifications', notificationsRoutes);
 app.use('/api/adaptive', adaptiveRoutes);
 
 // ─── HEALTH CHECK ───────────────────────────────────────────
-app.get('/api/health', (_req, res) => {
+app.get('/api/health', (_req: express.Request, res: express.Response) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
