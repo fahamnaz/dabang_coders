@@ -275,7 +275,7 @@ export function HomeScreen() {
             </p>
             <div className="mt-4 flex items-center gap-4">
               <button
-                onClick={() => window.open('https://game-five-flax.vercel.app/', '_blank', 'noopener,noreferrer')}
+                onClick={() => window.open('https://gulgoo-app.vercel.app/', '_blank', 'noopener,noreferrer')}
                 className="inline-flex items-center gap-3 rounded-[30px] border-[5px] border-white bg-gradient-to-r from-purple-500 to-fuchsia-500 px-8 py-4 text-2xl font-black text-white shadow-[0_12px_0_rgba(134,25,143,0.8)] hover:translate-y-2 hover:shadow-[0_4px_0_rgba(134,25,143,0.8)] transition-all"
                 style={{ fontFamily: '"Comic Sans MS", "Trebuchet MS", "Marker Felt", sans-serif' }}
               >
@@ -373,7 +373,7 @@ export function HomeScreen() {
                         </h3>
                         <p className="mt-2 text-base font-black text-slate-700">{game.description}</p>
                       </div>
-                      
+
                       <div className="rounded-full border-[4px] border-white bg-white px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-slate-800">
                         {game.status === 'ready' ? (game.externalUrl ? 'Play ↗' : 'Play') : 'Soon'}
                       </div>
