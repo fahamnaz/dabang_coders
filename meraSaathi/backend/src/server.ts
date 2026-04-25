@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
@@ -36,7 +36,7 @@ app.use('/api/notifications', notificationsRoutes);
 app.use('/api/adaptive', adaptiveRoutes);
 
 // ─── HEALTH CHECK ───────────────────────────────────────────
-app.get('/api/health', (_req: express.Request, res: express.Response) => {
+app.get('/api/health', (_req: Request, res: Response) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
